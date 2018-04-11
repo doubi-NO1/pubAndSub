@@ -1,4 +1,4 @@
-# pubAndSub.js  一款基于浏览器内置API实现的发布订阅模式封装
+# pubAndSub.js  基于浏览器内置API实现的发布订阅模式封装
 
 ## 原理
 本库不依赖任何第三方库，仅利用浏览器内置的MessageChannel实现发布订阅模式
@@ -6,7 +6,7 @@
 ## 快速开始
 
 ### 订阅事件
-sub方法接受三个参数，第一个是要订阅的事件名，第二个是订阅事件所触发的回调函数，第三个参数是触发回调执行时的this指向，相同事件可以重复订阅多次
+sub方法接受三个参数，第一个是要订阅的事件名，第二个是订阅事件所触发的回调函数，第三个参数是触发回调执行时的this指向，相同事件可以重复订阅多次
 ```javascript
   import { sub, pub } from 'bus.js'
 
@@ -55,6 +55,6 @@ pub方法接受两个参数，第一个是要发布的事件名称，第二个�
     },false);
 ```
 
-## 优雅降级
+## 优雅降级
 
-由于并不是所有浏览器都支持MessageChannel，因此对于不支持MessageChannel的浏览器，pubAndSub.js内部使用addEventListener来代替MessageChannel，以保证可以正常执行。
+由于并不是所有浏览器都支持MessageChannel，因此对于不支持MessageChannel的浏览器，pubAndSub.js内部使用addEventListener来代替MessageChannel，以保证可以正常执行。
